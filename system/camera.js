@@ -20,7 +20,7 @@ class Camera {
         this.y = this.pCenter.y - this.height / 2;
 
         this.game.entities.forEach(e => {
-            if (e.id != 'char') {
+            if (e.id != 'player') {
                 e.x -= this.player.delta.x;
                 e.y -= this.player.delta.y;
             }

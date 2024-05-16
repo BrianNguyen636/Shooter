@@ -1,8 +1,9 @@
 class Player extends Character {
   constructor(game) {
-    super("char", "Reisen", game, 150, 150, 30, 400, 400, 100);
+    super("player", "Reisen", game, 150, 150, 30, 800 - 75, 800 - 75, 100);
     this.facing = 0;
     this.setController(new PlayerController(this));
+    this.bulletManager = new PlayerBulletManager(this, this.controller);
     this.updateCollisionSphere();
   }
 

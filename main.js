@@ -9,6 +9,9 @@ ASSET_MANAGER.queueDownload("./assets/ReisenSprites.png")
 ASSET_MANAGER.queueDownload("./assets/ReisenSpritesFlip.png")
 ASSET_MANAGER.queueDownload("./assets/ReisenProjectiles.png")
 
+ASSET_MANAGER.queueDownload("./assets/BlueFairySprites.png")
+ASSET_MANAGER.queueDownload("./assets/BlueFairySpritesFlip.png")
+
 ASSET_MANAGER.downloadAll(() => {
 	const canvas = document.getElementById("gameWorld");
 	const ctx = canvas.getContext("2d");

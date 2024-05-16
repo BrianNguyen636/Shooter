@@ -11,8 +11,6 @@ class Projectile {
         this.calculateVelocity();
         this.spritesheet = ASSET_MANAGER.getAsset("./assets/" + this.name + "Projectiles.png");
         this.updateCollisionSphere();
-        
-
     };
     calculateVelocity() {
         this.radians = this.angle * Math.PI / 180;
@@ -45,6 +43,10 @@ class Projectile {
             this.removeFromWorld = true;
         }
     };
+    onHit(entity) {
+        entity.hurt(this);
+        this.pierce--;
+    }
 
     draw(ctx) {
         if (!this.removeFromWorld) {

@@ -25,6 +25,11 @@ class GameEngine {
         this.addEntity(player);
         this.player = player;
         this.camera = new Camera(this,1280, 800);
+        this.addEntity(new Enemy("BlueFairy", 200, 600));
+        this.addEntity(new Enemy("BlueFairy", 200, 200));
+
+        this.addEntity(new Enemy("BlueFairy", 200, 400));
+
     };
 
     start() {

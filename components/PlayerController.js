@@ -7,7 +7,7 @@ class PlayerController {
 
     this.walkspeed = 140;
     this.firerate = 1;
-    this.bulletManager = new PlayerBulletManager(this.player, this);
+    
   }
 
   checkCollisions(){
@@ -82,7 +82,7 @@ class PlayerController {
     if (inputManager.leftMouse) {
       //Shooting code here.
       if (this.shotTimer<=0 || !this.shotTimer) {
-        this.bulletManager.shoot();
+        this.player.bulletManager.shoot();
         this.shotTimer = this.firerate;
       } 
     }
